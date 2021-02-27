@@ -5,10 +5,8 @@ set -o nounset   # abort on unset variables
 set -o errexit   # abort on non-zero exit status
 set -o pipefail  # not hiding error within pipes
 
-
 readonly user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
 readonly output_dir="log"  # change it if you'd like to
-
 
 banner() {
 	clear
@@ -90,6 +88,7 @@ enum_from_url() {
 
 	create_log "${target}" "${user_list}"
 }
+
 
 main() {
 	local target="${1}"
