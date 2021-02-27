@@ -4,8 +4,8 @@
 Simple Bash Script For Collecting Wordpress Username
 
 <img src="https://raw.githubusercontent.com/relarizky/WPEnum/master/screenshot/1.png" 
-    height=10% width=15%> <img src="https://raw.githubusercontent.com/relarizky/WPEnum/master/screenshot/2.png"
-    height=10% width=15%>
+    height=25% width=30%> <img src="https://raw.githubusercontent.com/relarizky/WPEnum/master/screenshot/2.png"
+    height=25% width=30%>
     
 ## Installation
 ```
