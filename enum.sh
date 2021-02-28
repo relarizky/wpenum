@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
-
 set -o nounset   # abort on unset variables
 set -o errexit   # abort on non-zero exit status
 set -o pipefail  # not hiding error within pipes
 
-
 readonly user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
 readonly output_dir="log"  # change it if you'd like to
-
 
 banner() {
 	clear
@@ -21,7 +18,6 @@ banner() {
  	echo "    \/  \/   |_|    |______|_| |_|\__,_|_| |_| |_|"
 	echo -e "\n"
 }
-
 
 create_log() {
 	local url="${1}"
@@ -41,7 +37,6 @@ create_log() {
 	echo "[+] All found usernames are stored in ${output_dir}/${domain}"
 }
 
-
 enum_from_json() {
 	local target="${1}/wp-json/wp/v2/users/"
 	local request_body="$(curl --silent --user-agent ${user_agent} ${target})"
@@ -57,7 +52,6 @@ enum_from_json() {
 		create_log "${1}" "${user_list}"
 	fi
 }
-
 
 enum_from_url() {
 	local target="${1}";
@@ -90,7 +84,6 @@ enum_from_url() {
 
 	create_log "${target}" "${user_list}"
 }
-
 
 main() {
 	local target="${1}"
